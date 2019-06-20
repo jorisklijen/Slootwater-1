@@ -63,7 +63,7 @@ public class Shoot : MonoBehaviour {
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, levelVlees)){
             Debug.Log("Hit transform: " + hit.transform.name);
             Vector3 decalPos = hit.point - transform.forward * 0.01f;
-            GameObject impactObj = Instantiate(hitVlees, decalPos, Quaternion.LookRotation(hit.normal)); // spawns a bullet inpact op vlees.
+            GameObject impactObj = Instantiate(hitVlees, decalPos, Quaternion.LookRotation(hit.normal)); // spawns a bullet inpact op vhijand.
             impactObj.transform.Rotate(Vector3.forward, Random.Range(0.0f, 360.0f));
 
             Destroy(impactObj, 10);
