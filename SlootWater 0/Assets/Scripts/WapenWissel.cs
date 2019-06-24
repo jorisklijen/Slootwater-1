@@ -15,6 +15,8 @@ public class WapenWissel : MonoBehaviour
     {
         int priviusSelectedWapon = selectedWapon;
 
+       
+        // scrool weel muis
         if (Input.GetAxis("Mouse ScrollWheel") > 0)
         {
             if (selectedWapon >= transform.childCount - 1)
@@ -26,7 +28,6 @@ public class WapenWissel : MonoBehaviour
                 selectedWapon++;
             }
         }
-
         if (Input.GetAxis("Mouse ScrollWheel") < 0)
         {
             if (selectedWapon <= 0)
@@ -38,6 +39,23 @@ public class WapenWissel : MonoBehaviour
                 selectedWapon--;
             }
         }
+
+        //toetsen bord nummers 1, 2, 3, 4...
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            selectedWapon = 0;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2) && transform.childCount <=2)
+        {
+            selectedWapon = 1;
+        }
+
+    // if (Input.GetKeyDown(KeyCode.Alpha+toets nummer ) && transform.childCount >= 2)
+    // {
+    //     selectedWapon = -wapen index- ;
+    // }
+
+
 
         if (priviusSelectedWapon != selectedWapon)
         {
