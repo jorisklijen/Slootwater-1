@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/borssele-joris.unity
-    guid: cbfe36cfddfde964d9dfce63a355d5dd
+    path: Assets/Scenes/joris joris.unity
+    guid: 658bcfe7df3f15e46a9a92d85a6e2a0b
   m_configObjects: {}

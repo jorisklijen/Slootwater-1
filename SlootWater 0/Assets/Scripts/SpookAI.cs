@@ -48,11 +48,11 @@ public class SpookAI : MonoBehaviour {
         float bop = Mathf.Sin(Time.time) / bopDivider;
         transform.position = new Vector3(transform.position.x, transform.position.y + bop, transform.position.z);
 
-        bool shouldHide = Vector3.Distance(transform.position, player.transform.position) > revealDistance;
-        if (shouldHide) {
-            foreach (SkinnedMeshRenderer mr in mrs) {
-                mr.enabled = !shouldHide;
-            }
-        }
+        // bool shouldHide = Vector3.Distance(transform.position, player.transform.position) > revealDistance;
+        // if (shouldHide) {
+        //     foreach (SkinnedMeshRenderer mr in mrs) {
+        //         mr.enabled = !shouldHide;
+        //     }
+        // }
     }
 }
