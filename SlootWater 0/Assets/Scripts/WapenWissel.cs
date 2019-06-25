@@ -2,6 +2,7 @@
 
 public class WapenWissel : MonoBehaviour
 {
+    [Tooltip("Gaat hier van uit van de index van hoe de wapens zijn ge sorteerd onder het wapenHandel object. (van boven naar beneden)")]
     public int selectedWapon = 0;
 
     // Start is called before the first frame update

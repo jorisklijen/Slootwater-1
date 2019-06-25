@@ -28,7 +28,7 @@ public class Shoot : MonoBehaviour
     public int maxAmmo = 10;
     public int maggazijnOpslag = 3;
     private int currentAmmo;
-    private int currentOpsalg;
+    private int currentMags;
     public float reloadTime = 1f;
     private bool isReloding = false;
     public TextMeshProUGUI ammoReserveDispaly;
@@ -39,12 +39,14 @@ public class Shoot : MonoBehaviour
 
     private void Start()
     {
+        //zet de publieke variable om naar prive
         currentAmmo = maxAmmo;
-        currentOpsalg = maggazijnOpslag;
+        currentMags = maggazijnOpslag;
     }
 
     void OnEnable()
     {
+        //verkomt dat als je van wapen wisselt terwijl je herlaad een bugg krijgt waar in je wapen niet meer wilt schieten
         isReloding = false;
         animator.SetBool("Reloding", false);
     }
@@ -52,17 +54,19 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ammoReserveDispaly.text = currentOpsalg.ToString();
+        // geeft de ammo weer op het scherm 
+        ammoReserveDispaly.text = currentMags.ToString();
         ammoInuseDispaly.text = currentAmmo.ToString();
 
-
+        // verkomt dat je 2x tegelijk reload
         if (isReloding)
         {
             return;
         }
 
-
-        if ((currentAmmo <= 0 || Input.GetKeyDown(KeyCode.R)) && currentOpsalg >= 0)
+        //kijkt of je genoeg magazijenen hebt om te herlaaden. 
+        //herlaat als je op R klikt of als je magazijn leeg is.
+        if ((currentAmmo <= 0 || Input.GetKeyDown(KeyCode.R)) && currentMags > 0)
         {
             StartCoroutine(Reload());
             return;
@@ -70,8 +74,8 @@ public class Shoot : MonoBehaviour
 
 
         fireTimer += Time.deltaTime;
-        if (Input.GetButton("Fire1") && fireTimer > fireRateInSeconds)
-        {
+        if (Input.GetButton("Fire1") && fireTimer > fireRateInSeconds && currentAmmo > 0) 
+        { 
             fireTimer = 0.0f;
             Shooting(); // calls the schooting function. 
         }
@@ -81,19 +85,21 @@ public class Shoot : MonoBehaviour
     {
         isReloding = true;
         animator.SetBool("Reloding", true);
-        yield return new WaitForSeconds(reloadTime - .25f);
+        yield return new WaitForSeconds(reloadTime - .25f); // de .25f is voor de animaatie die anders niet is afgeloopen als je herladen hebt.
         animator.SetBool("Reloding", false);
         yield return new WaitForSeconds(.25f);
-        //hier t magazijn systeem
 
-        currentOpsalg--;
-        currentAmmo = maxAmmo;
+        Debug.Log("Herladen! Er zitten weer "+ currentAmmo +" kogels in het wapen. Nog " + currentMags +" over in de opslag.");
+
+        //hier t magazijn systeem
+        currentMags--;    // haalt een magazijn weg 
+        currentAmmo = maxAmmo; // zet het magazijn in gebruik weer treug naar zijn maximaale hoeveelhijd
         isReloding = false;
     }
 
     void Shooting()
     {
-
+        //haalt ammo uit ja magazijn
         currentAmmo--;
 
         // Bullet hole
@@ -109,7 +115,7 @@ public class Shoot : MonoBehaviour
 
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, levelBeton))
         {
-            Debug.Log("Hit transform: " + hit.transform.name);
+            //Debug.Log("Hit transform: " + hit.transform.name);
             Vector3 decalPos = hit.point - transform.forward * 0.01f;
             GameObject impactObj = Instantiate(hitBeton, decalPos, Quaternion.LookRotation(hit.normal)); // spawns a bullet inpact op beton.
             impactObj.transform.Rotate(Vector3.forward, Random.Range(0.0f, 360.0f));
@@ -119,7 +125,7 @@ public class Shoot : MonoBehaviour
 
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, levelStaal))
         {
-            Debug.Log("Hit transform: " + hit.transform.name);
+            //Debug.Log("Hit transform: " + hit.transform.name);
             Vector3 decalPos = hit.point - transform.forward * 0.01f;
             GameObject impactObj = Instantiate(hitStaal, decalPos, Quaternion.LookRotation(hit.normal)); // spawns a bullet inpact op staal.
             impactObj.transform.Rotate(Vector3.forward, Random.Range(0.0f, 360.0f));
@@ -129,7 +135,7 @@ public class Shoot : MonoBehaviour
 
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, levelVlees))
         {
-            Debug.Log("Hit transform: " + hit.transform.name);
+           // Debug.Log("Hit transform: " + hit.transform.name);
             Vector3 decalPos = hit.point - transform.forward * 0.01f;
             GameObject impactObj = Instantiate(hitVlees, decalPos, Quaternion.LookRotation(hit.normal)); // spawns a bullet inpact op vhijand.
             impactObj.transform.Rotate(Vector3.forward, Random.Range(0.0f, 360.0f));
