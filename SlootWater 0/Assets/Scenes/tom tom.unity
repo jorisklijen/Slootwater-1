@@ -38107,6 +38107,8 @@ MonoBehaviour:
   reloadTime: 0.6
   ammoReserveDispaly: {fileID: 512521550}
   ammoInuseDispaly: {fileID: 407278977}
+  shootSound: {fileID: 0}
+  ReloadSound: {fileID: 0}
   animator: {fileID: 1303234006}
 --- !u!4 &1301968230 stripped
 Transform:
@@ -44994,6 +44996,8 @@ MonoBehaviour:
   reloadTime: 3
   ammoReserveDispaly: {fileID: 512521550}
   ammoInuseDispaly: {fileID: 407278977}
+  shootSound: {fileID: 0}
+  ReloadSound: {fileID: 0}
   animator: {fileID: 1303234006}
 --- !u!1001 &1536182882
 PrefabInstance:
