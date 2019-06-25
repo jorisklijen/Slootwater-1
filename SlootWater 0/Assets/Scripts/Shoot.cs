@@ -34,6 +34,11 @@ public class Shoot : MonoBehaviour
     public TextMeshProUGUI ammoReserveDispaly;
     public TextMeshProUGUI ammoInuseDispaly;
 
+    [Header("Adio")]
+    public AudioSource shootSound;
+    public AudioSource ReloadSound;
+    
+
     [Header("Animaties")]
     public Animator animator;
 
@@ -78,18 +83,20 @@ public class Shoot : MonoBehaviour
         { 
             fireTimer = 0.0f;
             Shooting(); // calls the schooting function. 
+            shootSound.Play(); // starts teh soot sound.
         }
     }
 
     IEnumerator Reload()
     {
+        ReloadSound.Play();
         isReloding = true;
         animator.SetBool("Reloding", true);
         yield return new WaitForSeconds(reloadTime - .25f); // de .25f is voor de animaatie die anders niet is afgeloopen als je herladen hebt.
         animator.SetBool("Reloding", false);
         yield return new WaitForSeconds(.25f);
 
-        Debug.Log("Herladen! Er zitten weer "+ currentAmmo +" kogels in het wapen. Nog " + currentMags +" over in de opslag.");
+       //. Debug.Log("Herladen! Er zitten weer "+ currentAmmo +" kogels in het wapen. Nog " + currentMags +" over in de opslag.");
 
         //hier t magazijn systeem
         currentMags--;    // haalt een magazijn weg 
@@ -101,6 +108,11 @@ public class Shoot : MonoBehaviour
     {
         //haalt ammo uit ja magazijn
         currentAmmo--;
+
+        //sound
+
+
+
 
         // Bullet hole
         GameObject obj = Instantiate(muzzlePrefab, muzzleSpawn.transform);
