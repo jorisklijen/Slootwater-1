@@ -6,27 +6,54 @@ using Random = UnityEngine.Random;
 
 namespace UnityStandardAssets.Characters.FirstPerson
 {
-    [RequireComponent(typeof (CharacterController))]
-    [RequireComponent(typeof (AudioSource))]
+    [RequireComponent(typeof(CharacterController))]
+    [RequireComponent(typeof(AudioSource))]
     public class FirstPersonController : MonoBehaviour
     {
         [SerializeField] private bool m_IsWalking;
+
+        [Space(5)]
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;
+        [SerializeField] private float climbSpeed = 3.0f;
+        [SerializeField] private float climbRate = 0.5f;
+        private float climbDownThreshold = -0.4f;
+
         [SerializeField] [Range(0f, 1f)] private float m_RunstepLenghten;
         [SerializeField] private float m_JumpSpeed;
         [SerializeField] private float m_StickToGroundForce;
         [SerializeField] private float m_GravityMultiplier;
+
+        [Space(5)]
         [SerializeField] private MouseLook m_MouseLook;
         [SerializeField] private bool m_UseFovKick;
         [SerializeField] private FOVKick m_FovKick = new FOVKick();
+
+        [Space(5)]
         [SerializeField] private bool m_UseHeadBob;
         [SerializeField] private CurveControlledBob m_HeadBob = new CurveControlledBob();
         [SerializeField] private LerpControlledBob m_JumpBob = new LerpControlledBob();
+
+        [Space(5)]
         [SerializeField] private float m_StepInterval;
         [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
+        [SerializeField] private AudioClip[] m_LadderSounds;
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
+
+        private bool m_onLadder = false;
+        private bool useLadder = true;
+
+        private Vector3 climbDirection = Vector3.up;
+        private Vector3 lateralMove = Vector3.zero;
+        private Vector3 ladderMovement = Vector3.zero;
+        private Rigidbody rigidbody;
+        private CharacterController ChController;
+        private FirstPersonController Controller;
+        private GameObject LadderObject;
+        private float CamRot;
+        private float playTime = 0.0f;
+
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -55,6 +82,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+            rigidbody = this.GetComponent<Rigidbody>();
+            m_onLadder = false;
+            useLadder = true;
         }
 
 
@@ -81,6 +111,21 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+
+            if (m_onLadder)
+            {
+                StopAllCoroutines();
+                StartCoroutine(!m_IsWalking ? m_FovKick.FOVKickUp() : m_FovKick.FOVKickDown());
+                rigidbody.useGravity = false;
+                rigidbody.isKinematic = true;
+                LadderUpdate();
+            }
+            else
+            {
+                LadderObject = null;
+                rigidbody.useGravity = true;
+                rigidbody.isKinematic = true;
+            }
         }
 
 
@@ -96,41 +141,42 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             float speed;
             GetInput(out speed);
-            // always move along the camera forward as it is the direction that it being aimed at
-            Vector3 desiredMove = transform.forward*m_Input.y + transform.right*m_Input.x;
-
-            // get a normal for the surface that is being touched to move along it
-            RaycastHit hitInfo;
-            Physics.SphereCast(transform.position, m_CharacterController.radius, Vector3.down, out hitInfo,
-                               m_CharacterController.height/2f, Physics.AllLayers, QueryTriggerInteraction.Ignore);
-            desiredMove = Vector3.ProjectOnPlane(desiredMove, hitInfo.normal).normalized;
-
-            m_MoveDir.x = desiredMove.x*speed;
-            m_MoveDir.z = desiredMove.z*speed;
-
-
-            if (m_CharacterController.isGrounded)
+            if (!m_onLadder)
             {
-                m_MoveDir.y = -m_StickToGroundForce;
+                // always move along the camera forward as it is the direction that it being aimed at
+                Vector3 desiredMove = transform.forward * m_Input.y + transform.right * m_Input.x;
 
-                if (m_Jump)
+                // get a normal for the surface that is being touched to move along it
+                RaycastHit hitInfo;
+                Physics.SphereCast(transform.position, m_CharacterController.radius, Vector3.down, out hitInfo,
+                                   m_CharacterController.height / 2f);
+                desiredMove = Vector3.ProjectOnPlane(desiredMove, hitInfo.normal).normalized;
+
+                m_MoveDir.x = desiredMove.x * speed;
+                m_MoveDir.z = desiredMove.z * speed;
+
+
+                if (m_CharacterController.isGrounded)
                 {
-                    m_MoveDir.y = m_JumpSpeed;
-                    PlayJumpSound();
-                    m_Jump = false;
-                    m_Jumping = true;
+                    m_MoveDir.y = -m_StickToGroundForce;
+
+                    if (m_Jump)
+                    {
+                        m_MoveDir.y = m_JumpSpeed;
+                        PlayJumpSound();
+                        m_Jump = false;
+                        m_Jumping = true;
+                    }
                 }
-            }
-            else
-            {
-                m_MoveDir += Physics.gravity*m_GravityMultiplier*Time.fixedDeltaTime;
-            }
-            m_CollisionFlags = m_CharacterController.Move(m_MoveDir*Time.fixedDeltaTime);
+                else
+                {
+                    m_MoveDir += Physics.gravity * m_GravityMultiplier * Time.fixedDeltaTime;
+                }
+                m_CollisionFlags = m_CharacterController.Move(m_MoveDir * Time.fixedDeltaTime);
 
-            ProgressStepCycle(speed);
+                ProgressStepCycle(speed);
+            }
             UpdateCameraPosition(speed);
-
-            m_MouseLook.UpdateCursorLock();
         }
 
 
@@ -254,6 +300,66 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 return;
             }
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
+        }
+
+
+        //When on Ladder Trigger
+        private void OnTriggerStay(Collider ladder)
+        {
+            if (ladder.tag == "Ladder" && useLadder)
+            {
+                LadderObject = ladder.gameObject;
+                m_onLadder = true;
+            }
+        }
+
+
+        //Ladder Trigger Exit
+        private void OnTriggerExit(Collider ladder)
+        {
+            if (ladder.tag == "Ladder")
+            {
+                m_onLadder = false;
+                useLadder = true;
+            }
+        }
+
+        //Ladder Movement
+        private void LadderUpdate()
+        {
+            CamRot = m_Camera.transform.forward.y;
+            if (m_onLadder)
+            {
+                Vector3 verticalMove;
+                verticalMove = climbDirection.normalized;
+                verticalMove *= Input.GetAxis("Vertical");
+                verticalMove *= (CamRot > climbDownThreshold) ? 1 : -1;
+                lateralMove = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+                lateralMove = transform.TransformDirection(lateralMove);
+                ladderMovement = verticalMove + lateralMove;
+                m_CharacterController.Move(ladderMovement * climbSpeed * Time.deltaTime);
+
+                if (Input.GetAxis("Vertical") == 1 && !(m_AudioSource.isPlaying) && Time.time >= playTime)
+                {
+                    PlayLadderSound();
+                }
+
+                if (Input.GetKey(KeyCode.Space))
+                {
+                    useLadder = false;
+                    m_onLadder = false;
+                    LadderObject = null;
+                }
+            }
+        }
+
+        //Ladder Footsteps
+        void PlayLadderSound()
+        {
+            int r = Random.Range(0, m_LadderSounds.Length);
+            m_AudioSource.clip = m_LadderSounds[r];
+            m_AudioSource.PlayOneShot(m_AudioSource.clip);
+            playTime = Time.time + climbRate;
         }
     }
 }
