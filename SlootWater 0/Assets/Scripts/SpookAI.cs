@@ -18,6 +18,7 @@ public class SpookAI : MonoBehaviour {
 
     [SerializeField]
     private float revealDistance = 0.5f;
+    bool isShown = true;
 
     // Start is called before the first frame update
     void Start() {
@@ -48,11 +49,13 @@ public class SpookAI : MonoBehaviour {
         float bop = Mathf.Sin(Time.time) / bopDivider;
         transform.position = new Vector3(transform.position.x, transform.position.y + bop, transform.position.z);
 
-        // bool shouldHide = Vector3.Distance(transform.position, player.transform.position) > revealDistance;
-        // if (shouldHide) {
-        //     foreach (SkinnedMeshRenderer mr in mrs) {
-        //         mr.enabled = !shouldHide;
-        //     }
-        // }
+        bool shouldShow = Vector3.Distance(transform.position, player.transform.position) <= revealDistance;
+        if (shouldShow != isShown) {
+            isShown = shouldShow;
+
+            foreach (SkinnedMeshRenderer mr in mrs) {
+                mr.enabled = shouldShow;
+            }
+        }
     }
 }
