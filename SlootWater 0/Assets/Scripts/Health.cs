@@ -33,7 +33,7 @@ public class Health : MonoBehaviour {
     public float Subtract(float h) {
         health = Mathf.Max(0.0f, health - h);
 
-        if (health <= 0.0f) {
+        if (health <= 0.0f && OnDeath != null) {
             OnDeath.Invoke();
         }
 
