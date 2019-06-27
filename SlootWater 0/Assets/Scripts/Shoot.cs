@@ -36,7 +36,7 @@ public class Shoot : MonoBehaviour {
     [Header("Adio")]
     public AudioSource shootSound;
     public AudioSource ReloadSound;
-    
+
 
     [Header("Animaties")]
     public Animator animator;
@@ -81,8 +81,7 @@ public class Shoot : MonoBehaviour {
     }
 
 
-    IEnumerator Reload()
-    {
+    IEnumerator Reload() {
         ReloadSound.Play();
 
         isReloding = true;
@@ -102,11 +101,6 @@ public class Shoot : MonoBehaviour {
         //haalt ammo uit ja magazijn
         currentAmmo--;
 
-        //sound
-
-
-
-
         // Bullet hole
         GameObject obj = Instantiate(muzzlePrefab, muzzleSpawn.transform);
         obj.transform.position = muzzleSpawn.transform.position;
@@ -116,7 +110,16 @@ public class Shoot : MonoBehaviour {
         //de masks waar op de kogels op bebaald worden
         int levelBeton = 1 << LayerMask.NameToLayer("LevelBeton");
         int levelStaal = 1 << LayerMask.NameToLayer("LevelStaal");
-        int levelVlees = 1 << LayerMask.NameToLayer("LevelVlees");
+        int spookEnemy = 1 << LayerMask.NameToLayer("Spooky");
+
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, spookEnemy)) {
+            const float GHOST_YEET_RANGE = 2500.0f;
+
+            hit.transform.position = new Vector3(Random.Range(-GHOST_YEET_RANGE, GHOST_YEET_RANGE),
+                                                 Random.Range(-GHOST_YEET_RANGE, GHOST_YEET_RANGE),
+                                                 Random.Range(-GHOST_YEET_RANGE, GHOST_YEET_RANGE));
+            Debug.Log("YEET");
+        }
 
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, levelBeton)) {
             //Debug.Log("Hit transform: " + hit.transform.name);
@@ -135,15 +138,5 @@ public class Shoot : MonoBehaviour {
 
             Destroy(impactObj, 10);
         }
-
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, levelVlees)) {
-            // Debug.Log("Hit transform: " + hit.transform.name);
-            Vector3 decalPos = hit.point - transform.forward * 0.01f;
-            GameObject impactObj = Instantiate(hitVlees, decalPos, Quaternion.LookRotation(hit.normal)); // spawns a bullet inpact op vhijand.
-            impactObj.transform.Rotate(Vector3.forward, Random.Range(0.0f, 360.0f));
-
-            Destroy(impactObj, 10);
-        }
     }
 }
-

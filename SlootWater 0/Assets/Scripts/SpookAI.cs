@@ -41,6 +41,8 @@ public class SpookAI : MonoBehaviour {
 
         if (!inRange) {
             Vector3 dir = player.transform.position - transform.position;
+            dir.Normalize();
+
             transform.position += dir * speed;
         }
 
