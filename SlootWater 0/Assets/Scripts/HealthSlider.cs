@@ -10,8 +10,8 @@ public class HealthSlider : MonoBehaviour
 
     private void Start()
     {
-        float healthValue = gameObject.GetComponent<Health>().health;
-        float maaxHealthValue = gameObject.GetComponent<Health>().maxHealth;
+      float healthValue = gameObject.GetComponent<Health>().Get();
+      float maaxHealthValue = gameObject.GetComponent<Health>().GetMax();
 
         
     }
@@ -20,6 +20,8 @@ public class HealthSlider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // bugg hiher zit momneteel een bugg dat hij allen maar Null trug gaat
+
         Health health = gameObject.GetComponent<Health>();
         Debug.Log(health == null);
         healthBar.GetComponent<Image>().fillAmount = health.Get();
