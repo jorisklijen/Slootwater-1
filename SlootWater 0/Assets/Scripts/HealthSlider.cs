@@ -3,28 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthSlider : MonoBehaviour
-{ 
+public class HealthSlider : MonoBehaviour {
     public Transform healthBar;
     public Transform maxHelthBar;
 
     private Health health;
 
 
-    private void Start()
-    {
+    private void Start() {
         health = GameObject.Find("Player").GetComponent<Health>();
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        //Debug.Log(health == null);
+    void Update() {
+        // @HARDCODED: max capacity health
         const float MAX_HEALTH = 100.0f;
-        healthBar.GetComponent<Image>().fillAmount = health.Get() / MAX_HEALTH ;
-        maxHelthBar.GetComponent<Image>().fillAmount = health.GetMax() / MAX_HEALTH ;
+        healthBar.GetComponent<Image>().fillAmount = health.Get() / MAX_HEALTH;
+        maxHelthBar.GetComponent<Image>().fillAmount = health.GetMax() / MAX_HEALTH;
 
-        health.Subtract(0.1f);
-        
+        // health.Subtract(0.1f);
+
     }
 }

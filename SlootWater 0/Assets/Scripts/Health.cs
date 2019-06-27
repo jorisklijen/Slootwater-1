@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Health : MonoBehaviour {
 
-    [SerializeField]
-    private float maxHealth;
+    [SerializeField, Range(0.0f, 100.0f)]
+    private float maxHealth = 100.0f;
     private float health;
 
     public event Action OnDeath;
