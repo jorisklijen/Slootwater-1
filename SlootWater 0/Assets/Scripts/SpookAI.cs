@@ -20,11 +20,23 @@ public class SpookAI : MonoBehaviour {
     private float revealDistance = 0.5f;
     bool isShown = true;
 
+    [SerializeField]
+    private float yeetRange = 1000.0f;
+
+    public float GetYeet() {
+        return yeetRange;
+    }
+
+
     // Start is called before the first frame update
     void Start() {
         player = GameObject.Find("Player");
         anim   = GetComponent<Animator>();
         mrs    = GetComponentsInChildren<SkinnedMeshRenderer>();
+
+        transform.position = new Vector3(Random.Range(-yeetRange, yeetRange),
+                                         Random.Range(-yeetRange, yeetRange),
+                                         Random.Range(-yeetRange, yeetRange));
     }
 
     // Update is called once per frame

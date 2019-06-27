@@ -113,12 +113,11 @@ public class Shoot : MonoBehaviour {
         int spookEnemy = 1 << LayerMask.NameToLayer("Spooky");
 
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, spookEnemy)) {
-            const float GHOST_YEET_RANGE = 2500.0f;
+            float yeetRange = hit.transform.GetComponent<SpookAI>().GetYeet();
 
-            hit.transform.position = new Vector3(Random.Range(-GHOST_YEET_RANGE, GHOST_YEET_RANGE),
-                                                 Random.Range(-GHOST_YEET_RANGE, GHOST_YEET_RANGE),
-                                                 Random.Range(-GHOST_YEET_RANGE, GHOST_YEET_RANGE));
-            Debug.Log("YEET");
+            hit.transform.position = new Vector3(Random.Range(-yeetRange, yeetRange),
+                                                 Random.Range(-yeetRange, yeetRange),
+                                                 Random.Range(-yeetRange, yeetRange));
         }
 
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, levelBeton)) {
