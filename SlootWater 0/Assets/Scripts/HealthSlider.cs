@@ -8,23 +8,23 @@ public class HealthSlider : MonoBehaviour
     public Transform healthBar;
     public Transform maxHelthBar;
 
+    private Health health;
+
+
     private void Start()
     {
-      float healthValue = gameObject.GetComponent<Health>().Get();
-      float maaxHealthValue = gameObject.GetComponent<Health>().GetMax();
-
-        
+        health = GameObject.Find("Player").GetComponent<Health>();
     }
-
 
     // Update is called once per frame
     void Update()
     {
-        // bugg hiher zit momneteel een bugg dat hij allen maar Null trug gaat
+        //Debug.Log(health == null);
+        const float MAX_HEALTH = 100.0f;
+        healthBar.GetComponent<Image>().fillAmount = health.Get() / MAX_HEALTH ;
+        maxHelthBar.GetComponent<Image>().fillAmount = health.GetMax() / MAX_HEALTH ;
 
-        Health health = gameObject.GetComponent<Health>();
-        Debug.Log(health == null);
-        healthBar.GetComponent<Image>().fillAmount = health.Get();
-        maxHelthBar.GetComponent<Image>().fillAmount = health.GetMax();
+        health.Subtract(0.1f);
+        
     }
 }
