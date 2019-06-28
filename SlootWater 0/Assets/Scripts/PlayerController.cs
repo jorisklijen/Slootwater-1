@@ -42,12 +42,12 @@ public class PlayerController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Minus)) {
-            health.Subtract(0.5f);
+        if (Input.GetKey(KeyCode.Minus)) {
+            health.Subtract(0.25f);
         }
 
-        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Plus)) {
-            health.Add(0.5f);
+        if (Input.GetKey(KeyCode.Plus) && Input.GetKey(KeyCode.LeftShift)) {
+            health.Add(0.25f);
         }
     }
 }
