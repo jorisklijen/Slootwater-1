@@ -36,7 +36,6 @@ public class Distributor : MonoBehaviour {
 
         medkitRates.OrderByDescending(x => x.health);
 
-
         InvokeRepeating("TrySpawnMedkit", medkitSpawnTime, medkitSpawnTime);
     }
 
@@ -45,7 +44,6 @@ public class Distributor : MonoBehaviour {
         GameObject[] medkits = GameObject.FindGameObjectsWithTag("Medkit");
 
         if (medkits.Length >= maxMedkits && maxMedkits != -1) return;
-        Debug.Log("Attempting to spawn medkit...");
 
         // Probeer een nieuwe medkit te spawnen
         foreach (SpawnChance sc in medkitRates) {
@@ -64,11 +62,13 @@ public class Distributor : MonoBehaviour {
                         }
                     }
 
-                    if (!spawnValid) {
-                        Debug.Log("No suitable positions!");
-                    }
+                    // Alle spawns die we hebben gecheckt zijn vol.
+                    // Dit kan betekenen dat alle spawn spots vol zijn
+                    // of dat alle spawns die wij willekeurig geselecteerd
+                    // hebben vol zitten. In de tweede scenario kunnen wij
+                    // in de volgende check nog spawns vinden.
+                    if (!spawnValid) return;
 
-                    Debug.Log("Medkit spawned!");
                     GameObject obj = Instantiate(medkitPrefab);
                     obj.transform.SetParent(spawnPoint.transform);
                     obj.transform.localPosition = Vector3.zero;
