@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4050444042300614}
   - component: {fileID: 33361747951707934}
   - component: {fileID: 23996431129216742}
-  - component: {fileID: 64598061486440850}
-  m_Layer: 0
+  - component: {fileID: 649512457644850468}
+  m_Layer: 10
   m_Name: BASML_Props_Celling_Lamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,8 +79,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &64598061486440850
-MeshCollider:
+--- !u!136 &649512457644850468
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -89,10 +89,10 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300002, guid: acb00d3cc9b6bcf46ab7dbb6012bd70f, type: 3}
+  m_Radius: 0.0417
+  m_Height: 0.2009753
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.42061234, z: 0}
 --- !u!1 &1584580022322458
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 108801691221564060}
   - component: {fileID: 2277613003453560943}
   - component: {fileID: 8129313290647556739}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
