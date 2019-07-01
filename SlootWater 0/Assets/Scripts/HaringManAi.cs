@@ -20,7 +20,9 @@ public class HaringManAi : MonoBehaviour
     private Health playerHealth;
     private float attackTimer = 0.0f;
     private Health enemyHealth;
-
+    private Animator anim;
+    private bool isAlive = true;
+    private float sinkTimer = 0.0f;
 
     private void Start()
     {
@@ -29,25 +31,54 @@ public class HaringManAi : MonoBehaviour
         playerHealth = player.GetComponent<Health>();
         enemyHealth = GetComponent<Health>();
         enemyHealth.OnDeath += EnemyHealth_OnDeath;
+        anim = GetComponent<Animator>();
     }
 
     private void EnemyHealth_OnDeath()
     {
-        Destroy(gameObject);
+        anim.SetTrigger("HaringDood");
+        nav.enabled = false;
+
+        StartCoroutine(SetDead());
+    }
+
+    IEnumerator SetDead()
+    {
+        yield return new WaitForSeconds(3.0f);
+        isAlive = false;
+        yield return null;
     }
 
     private void Update()
     {
-        nav.SetDestination(player.transform.position);
-
-
-        attackTimer += Time.deltaTime;
-        if(Vector3.Distance(transform.position , player.transform.position) <= minAttackRange && attackTimer >= attackSpeedInSeconds )
+        if (isAlive == true)
         {
-            playerHealth.Subtract(damageToPlayer);
-            attackTimer = 0.0f;
-        }
+            if (nav.enabled)
+            {
+                nav.SetDestination(player.transform.position);
+            }
 
+            attackTimer += Time.deltaTime;
+            if (Vector3.Distance(transform.position, player.transform.position) <= minAttackRange && attackTimer >= attackSpeedInSeconds)
+            {
+                playerHealth.Subtract(damageToPlayer);
+                attackTimer = 0.0f;
+            }
+        }
+        else
+        {
+            sinkTimer += Time.deltaTime;
+
+            const float SINK_SECONDS = 5.0f;
+            if (sinkTimer >= SINK_SECONDS)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                transform.position -= new Vector3(0.0f, 0.003f, 0.0f);
+            }
+        }
     }
 
 

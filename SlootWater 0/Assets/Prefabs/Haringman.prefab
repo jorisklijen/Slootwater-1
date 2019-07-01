@@ -65,7 +65,7 @@ MonoBehaviour:
   playerInSight: 0
   personallastSighting: {x: 0, y: 0, z: 0}
   minAttackRange: 2
-  damageToPlayer: 3
+  damageToPlayer: 9
   attackSpeedInSeconds: 1
 --- !u!1001 &1371439122748416781
 PrefabInstance:

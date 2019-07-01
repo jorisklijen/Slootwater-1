@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Shoot : MonoBehaviour {
+public class Shoot : MonoBehaviour
+{
 
     [Header("Stats")]
     public float damage = 10f;
@@ -41,39 +42,45 @@ public class Shoot : MonoBehaviour {
     [Header("Animaties")]
     public Animator animator;
 
-    private void Start() {
+    private void Start()
+    {
         //zet de publieke variable om naar prive
         currentAmmo = maxAmmo;
         currentMags = maggazijnOpslag;
     }
 
-    void OnEnable() {
+    void OnEnable()
+    {
         //verkomt dat als je van wapen wisselt terwijl je herlaad een bugg krijgt waar in je wapen niet meer wilt schieten
         isReloding = false;
         animator.SetBool("Reloding", false);
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
         // geeft de ammo weer op het scherm 
         ammoReserveDispaly.text = currentMags.ToString();
         ammoInuseDispaly.text = currentAmmo.ToString();
 
         // verkomt dat je 2x tegelijk reload
-        if (isReloding) {
+        if (isReloding)
+        {
             return;
         }
 
         //kijkt of je genoeg magazijenen hebt om te herlaaden. 
         //herlaat als je op R klikt of als je magazijn leeg is.
-        if ((currentAmmo <= 0 || Input.GetKeyDown(KeyCode.R)) && currentMags > 0) {
+        if ((currentAmmo <= 0 || Input.GetKeyDown(KeyCode.R)) && currentMags > 0)
+        {
             StartCoroutine(Reload());
             return;
         }
 
 
         fireTimer += Time.deltaTime;
-        if (Input.GetButton("Fire1") && fireTimer > fireRateInSeconds && currentAmmo > 0) {
+        if (Input.GetButton("Fire1") && fireTimer > fireRateInSeconds && currentAmmo > 0)
+        {
             fireTimer = 0.0f;
             Shooting(); // calls the schooting function. 
             shootSound.Play(); // starts teh soot sound.
@@ -81,7 +88,8 @@ public class Shoot : MonoBehaviour {
     }
 
 
-    IEnumerator Reload() {
+    IEnumerator Reload()
+    {
         ReloadSound.Play();
 
         isReloding = true;
@@ -97,7 +105,8 @@ public class Shoot : MonoBehaviour {
         isReloding = false;
     }
 
-    void Shooting() {
+    void Shooting()
+    {
         //haalt ammo uit ja magazijn
         currentAmmo--;
 
@@ -113,21 +122,20 @@ public class Shoot : MonoBehaviour {
         int spookEnemy = 1 << LayerMask.NameToLayer("Spooky");
         int haringEnemy = 1 << LayerMask.NameToLayer("Haring");
 
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, spookEnemy)) {
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, spookEnemy))
+        {
             float yeetRange = hit.transform.GetComponent<SpookAI>().GetYeet();
 
             hit.transform.position = new Vector3(Random.Range(-yeetRange, yeetRange),
                                                  Random.Range(-yeetRange, yeetRange),
                                                  Random.Range(-yeetRange, yeetRange));
         }
-
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, haringEnemy))
+        else if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, haringEnemy))
         {
             hit.transform.GetComponent<Health>().Subtract(damage);
-            
         }
-
-            if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, levelBeton)) {
+        else if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, levelBeton))
+        {
             //Debug.Log("Hit transform: " + hit.transform.name);
             Vector3 decalPos = hit.point - transform.forward * 0.01f;
             GameObject impactObj = Instantiate(hitBeton, decalPos, Quaternion.LookRotation(hit.normal)); // spawns a bullet inpact op beton.
@@ -135,7 +143,8 @@ public class Shoot : MonoBehaviour {
 
             Destroy(impactObj, 10);
         }
-        else if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, levelStaal)) {
+        else if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, levelStaal))
+        {
             //Debug.Log("Hit transform: " + hit.transform.name);
             Vector3 decalPos = hit.point - transform.forward * 0.01f;
             GameObject impactObj = Instantiate(hitStaal, decalPos, Quaternion.LookRotation(hit.normal)); // spawns a bullet inpact op staal.
