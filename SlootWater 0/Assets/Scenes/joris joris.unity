@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.09884744, g: 0.103915215, b: 0.114988275, a: 1}
+  m_IndirectSpecularColor: {r: 0.14021166, g: 0.14381987, b: 0.15173732, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -43172,6 +43172,10 @@ PrefabInstance:
       propertyPath: m_LadderSounds.Array.data[2]
       value: 
       objectReference: {fileID: 8300000, guid: 8f07db74c5799ff4c8828c9e686b9e9f, type: 3}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_MouseLook.smoothTime
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 14300000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_Radius
       value: 0.5
@@ -44354,7 +44358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9d843f485fdf7a48b6a8e8c027ea9d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  medkitSpawnTime: 2
+  medkitSpawnTime: 9
   medkitPrefab: {fileID: 6004129853684620223, guid: ad709549b652f414a84a02cb59dfed28,
     type: 3}
   maxMedkits: -1
