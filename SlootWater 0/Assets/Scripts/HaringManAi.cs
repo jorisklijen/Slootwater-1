@@ -14,7 +14,8 @@ public class HaringManAi : MonoBehaviour
 
 
     private NavMeshAgent nav;
-
+    private SphereCollider col;
+    private Vector3 previousSighting;
 
     private GameObject player;
     private Health playerHealth;
@@ -32,6 +33,8 @@ public class HaringManAi : MonoBehaviour
         enemyHealth = GetComponent<Health>();
         enemyHealth.OnDeath += EnemyHealth_OnDeath;
         anim = GetComponent<Animator>();
+
+        
     }
 
     private void EnemyHealth_OnDeath()
