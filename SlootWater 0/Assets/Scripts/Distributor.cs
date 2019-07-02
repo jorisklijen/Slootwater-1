@@ -47,7 +47,7 @@ public class Distributor : MonoBehaviour {
 
         // Probeer een nieuwe medkit te spawnen
         foreach (SpawnChance sc in medkitRates) {
-            if (playerHealth.Get() >= sc.health) {
+            if (playerHealth.Get() <= sc.health) {
                 bool spawn = Random.Range(0.0f, 100.0f) <= sc.chance;
 
                 if (spawn) {
