@@ -26,7 +26,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f725b1ad7f22caf43af5d3dce57fb48a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 80
+  maxHealth: 60
 --- !u!195 &1324809876438143997
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
   playerInSight: 0
   personallastSighting: {x: 0, y: 0, z: 0}
   minAttackRange: 2
-  damageToPlayer: 9
+  damageToPlayer: 8
   attackSpeedInSeconds: 1
 --- !u!1001 &1371439122748416781
 PrefabInstance:
