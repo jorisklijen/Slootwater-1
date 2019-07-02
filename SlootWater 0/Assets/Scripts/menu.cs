@@ -5,13 +5,8 @@ using UnityEngine.Audio;
 
 public class menu : MonoBehaviour
 {
-    
-
     public string sceneName;
     public Animator trasitionAnim;
-
-   
-
 
     //niet helemaal netjese maar de eerste anim n wilde niet stoppen met afspeel dus heb t zo maar ge fixt :)
     void Start()
@@ -37,7 +32,6 @@ public class menu : MonoBehaviour
         }
     }
 
-
     // zorgt ervoor de de scene pas geladen word na dat de anmim voor bij is.
     
     IEnumerator LoadScene()
@@ -49,6 +43,7 @@ public class menu : MonoBehaviour
 
     public void LoadBttn()
     {
+        Debug.Log("laad scene via knop");
         StartCoroutine(LoadScene());
     }
 
