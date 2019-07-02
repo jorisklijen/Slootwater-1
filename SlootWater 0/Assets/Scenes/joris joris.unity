@@ -6164,6 +6164,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spookman
       objectReference: {fileID: 0}
+    - target: {fileID: 6488480646769161023, guid: f7017dd21287ac047b524d1576ed4f2a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6493645544798278965, guid: f7017dd21287ac047b524d1576ed4f2a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8949,7 +8954,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 332057575}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6ef70eb5a554bc4a99bb9f66d49cb5d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2530850cd72925d4cbe7ed606781eceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &333352604 stripped
@@ -9671,7 +9676,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 359213207}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6ef70eb5a554bc4a99bb9f66d49cb5d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2530850cd72925d4cbe7ed606781eceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &360035237 stripped
@@ -11115,6 +11120,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 1372694620304729491, guid: 99e0d2ffa9a75e747987c032b3990daf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1376250498751497113, guid: 99e0d2ffa9a75e747987c032b3990daf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11669,6 +11679,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372694620304729491, guid: 99e0d2ffa9a75e747987c032b3990daf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1376250498751497113, guid: 99e0d2ffa9a75e747987c032b3990daf,
         type: 3}
@@ -15309,7 +15324,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 554400467}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6ef70eb5a554bc4a99bb9f66d49cb5d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2530850cd72925d4cbe7ed606781eceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &556149305
@@ -18117,6 +18132,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 1372694620304729491, guid: 99e0d2ffa9a75e747987c032b3990daf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1376250498751497113, guid: 99e0d2ffa9a75e747987c032b3990daf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18518,6 +18538,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372694620304729491, guid: 99e0d2ffa9a75e747987c032b3990daf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1376250498751497113, guid: 99e0d2ffa9a75e747987c032b3990daf,
         type: 3}
@@ -19860,6 +19885,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372694620304729491, guid: 99e0d2ffa9a75e747987c032b3990daf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1376250498751497113, guid: 99e0d2ffa9a75e747987c032b3990daf,
         type: 3}
@@ -28444,7 +28474,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 925808381}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6ef70eb5a554bc4a99bb9f66d49cb5d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2530850cd72925d4cbe7ed606781eceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &926166549 stripped
@@ -35213,7 +35243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2032a80b985bc44b3e521476d18a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 30
   range: 100
   fireRateInSeconds: 0.35
   fpsCam: {fileID: 2076996453}
@@ -35224,7 +35254,7 @@ MonoBehaviour:
   hitStaal: {fileID: 100002, guid: 627bfa08ce624ab40ab2fea71785b5f0, type: 3}
   hitVlees: {fileID: 100002, guid: 053ffbc5e89111349bb060a39ffa0f37, type: 3}
   maxAmmo: 8
-  maggazijnOpslag: 3
+  maggazijnOpslag: 4
   reloadTime: 0.6
   ammoReserveDispaly: {fileID: 420110813}
   ammoInuseDispaly: {fileID: 907556855}
@@ -40727,7 +40757,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1336122975}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6ef70eb5a554bc4a99bb9f66d49cb5d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2530850cd72925d4cbe7ed606781eceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1337310533
@@ -41675,7 +41705,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1363278947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6ef70eb5a554bc4a99bb9f66d49cb5d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2530850cd72925d4cbe7ed606781eceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1364050061
@@ -42255,7 +42285,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1379137072}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6ef70eb5a554bc4a99bb9f66d49cb5d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2530850cd72925d4cbe7ed606781eceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1379646260 stripped
@@ -42968,7 +42998,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1397348320}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6ef70eb5a554bc4a99bb9f66d49cb5d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2530850cd72925d4cbe7ed606781eceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1401519122 stripped
@@ -44355,28 +44385,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1449069617}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9d843f485fdf7a48b6a8e8c027ea9d4, type: 3}
+  m_Script: {fileID: 11500000, guid: fdde6b781a886ef46a0c1279455028f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  medkitSpawnTime: 9
-  medkitPrefab: {fileID: 6004129853684620223, guid: ad709549b652f414a84a02cb59dfed28,
-    type: 3}
+  medkitSpawnTime: 60
+  medkitPrefab: {fileID: 0}
   maxMedkits: -1
-  medkitRates:
-  - health: 100
-    chance: 0
-  - health: 80
-    chance: 20
-  - health: 60
-    chance: 40
-  - health: 40
-    chance: 60
-  - health: 20
-    chance: 80
-  - health: 10
-    chance: 90
-  - health: 3
-    chance: 100
+  medkitRates: []
 --- !u!4 &1449069619
 Transform:
   m_ObjectHideFlags: 0
@@ -50348,6 +50363,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 1372694620304729491, guid: 99e0d2ffa9a75e747987c032b3990daf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1376250498751497113, guid: 99e0d2ffa9a75e747987c032b3990daf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -53856,9 +53876,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2032a80b985bc44b3e521476d18a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 20
   range: 100
-  fireRateInSeconds: 0.15
+  fireRateInSeconds: 0.12
   fpsCam: {fileID: 2076996453}
   muzzleSpawn: {fileID: 491763588}
   muzzlePrefab: {fileID: 103356501597466792, guid: 3956f7e0f3cf0fe408180a7d5ff2c251,
@@ -53866,7 +53886,7 @@ MonoBehaviour:
   hitBeton: {fileID: 100006, guid: 94a130fb17f1cae4388a8fe1d8bd3055, type: 3}
   hitStaal: {fileID: 100002, guid: 627bfa08ce624ab40ab2fea71785b5f0, type: 3}
   hitVlees: {fileID: 100002, guid: 053ffbc5e89111349bb060a39ffa0f37, type: 3}
-  maxAmmo: 30
+  maxAmmo: 32
   maggazijnOpslag: 2
   reloadTime: 1.2
   ammoReserveDispaly: {fileID: 420110813}
@@ -54670,7 +54690,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.120000005
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 1b17230af03626342820d4847a701bad, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: fd799fb595d9df943819141f9fd05648, type: 2}
 --- !u!4 &1749217686
 Transform:
   m_ObjectHideFlags: 0
@@ -62374,6 +62394,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 1372694620304729491, guid: 99e0d2ffa9a75e747987c032b3990daf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1376250498751497113, guid: 99e0d2ffa9a75e747987c032b3990daf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -64903,7 +64928,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2093568241}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6ef70eb5a554bc4a99bb9f66d49cb5d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2530850cd72925d4cbe7ed606781eceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &2094263748
