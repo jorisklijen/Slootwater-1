@@ -42,7 +42,15 @@ public class Shoot : MonoBehaviour
     [Header("Animaties")]
     public Animator animator;
 
-    private void Start()
+    public void AddMagazines(int amount = 1) {
+        currentMags += amount;
+    }
+
+    public int GetCurrentMags() {
+        return currentMags;
+    }
+
+    private void Awake()
     {
         //zet de publieke variable om naar prive
         currentAmmo = maxAmmo;

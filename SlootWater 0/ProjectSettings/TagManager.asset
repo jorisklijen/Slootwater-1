@@ -9,6 +9,7 @@ TagManager:
   - Ladder
   - ItemSpawn
   - Medkit
+  - Magazine
   layers:
   - Default
   - TransparentFX

@@ -5,17 +5,17 @@ using UnityEngine;
 
 public class Distributor : MonoBehaviour {
 
-    GameObject[] spawnPoints;
-    Health playerHealth;
-
     [System.Serializable]
     struct SpawnChance {
-        [Tooltip("Hoeveel health de speler minimaal moet hebben voor deze case"), Range(0.0f, 100.0f)]
-        public float health;
+        [Tooltip("Hoeveel health/magazines/radiate/etc de speler minimaal moet hebben voor deze case"), Range(0.0f, 1.0f)]
+        public float value;
 
         [Tooltip("Procent kans om een medkit the spawnen"), Range(0.0f, 100.0f)]
         public float chance;
     }
+
+    GameObject[] spawnPoints;
+    Health playerHealth;
 
     [SerializeField, Header("Tijd wanneer het een nieuwe medkit probeert te spawnen")]
     private float medkitSpawnTime = 60.0f;
@@ -29,25 +29,60 @@ public class Distributor : MonoBehaviour {
     [SerializeField]
     List<SpawnChance> medkitRates;
 
+    [SerializeField]
+    Shoot playerPistol;
+
+    [SerializeField]
+    Shoot playerRifle;
+
+    [SerializeField, Header("Tijd wanneer het een nieuwe magazine probeert te spawnen")]
+    private float magazineSpawnTime = 60.0f;
+
+    [SerializeField]
+    GameObject magazinePrefab;
+
+    [SerializeField, Header("-1 voor geen limiet")]
+    private int maxMagazines = -1;
+
+    [SerializeField]
+    List<SpawnChance> magazineRates;
+
+
+
     // Start is called before the first frame update
     void Start() {
         spawnPoints  = GameObject.FindGameObjectsWithTag("ItemSpawn");
         playerHealth = GameObject.Find("Player").GetComponent<Health>();
 
-        medkitRates.OrderByDescending(x => x.health);
+        medkitRates.OrderByDescending(x => x.value);
+        magazineRates.OrderByDescending(x => x.value);
 
         InvokeRepeating("TrySpawnMedkit", medkitSpawnTime, medkitSpawnTime);
+        InvokeRepeating("TrySpawnMagazine", magazineSpawnTime, magazineSpawnTime);
     }
 
     void TrySpawnMedkit() {
-        // Check hoeveel medkits we hebben
-        GameObject[] medkits = GameObject.FindGameObjectsWithTag("Medkit");
+        TrySpawnItem(medkitPrefab, "Medkit", 100.0f, playerHealth.Get(), medkitRates, maxMedkits);
+    }
 
-        if (medkits.Length >= maxMedkits && maxMedkits != -1) return;
+    void TrySpawnMagazine() {
+        int totalMags = 0;
+        totalMags += playerPistol.GetCurrentMags();
+        totalMags += playerRifle.GetCurrentMags();
+
+        TrySpawnItem(magazinePrefab, "Magazine", 7, totalMags, magazineRates, maxMagazines);
+    }
+
+    void TrySpawnItem(GameObject prefab, string tagName, float maxValue, float value,
+                        List<SpawnChance> chanceList, int maxItems) {
+        // Check hoeveel medkits we hebben
+        GameObject[] items = GameObject.FindGameObjectsWithTag(tagName);
+
+        if (items.Length >= maxItems && maxItems != -1) return;
 
         // Probeer een nieuwe medkit te spawnen
-        foreach (SpawnChance sc in medkitRates) {
-            if (playerHealth.Get() <= sc.health) {
+        foreach (SpawnChance sc in chanceList) {
+            if (value <= sc.value * maxValue) {
                 bool spawn = Random.Range(0.0f, 100.0f) <= sc.chance;
 
                 if (spawn) {
@@ -69,10 +104,9 @@ public class Distributor : MonoBehaviour {
                     // in de volgende check nog spawns vinden.
                     if (!spawnValid) return;
 
-                    GameObject obj = Instantiate(medkitPrefab);
+                    GameObject obj = Instantiate(prefab);
                     obj.transform.SetParent(spawnPoint.transform);
                     obj.transform.localPosition = Vector3.zero;
-                    Debug.Log(obj.transform.position);
                     break;
                 }
             }

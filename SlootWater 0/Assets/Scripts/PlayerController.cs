@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 using UnityStandardAssets.Characters.FirstPerson;
 
@@ -25,10 +26,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     void HandleDeath() {
-        // Return health
-        health.Add(health.GetMax());
-
-        StartCoroutine(Respawn());
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     IEnumerator Respawn() {
