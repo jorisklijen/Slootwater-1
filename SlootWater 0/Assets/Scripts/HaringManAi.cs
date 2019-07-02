@@ -10,7 +10,7 @@ public class HaringManAi : MonoBehaviour
     public Vector3 personallastSighting;
     public float minAttackRange = 2.0f;
     public float damageToPlayer = 3.0f;
-    public float attackSpeedInSeconds = 1.0f;
+    public float attackSpeedInSeconds = 1.5f;
 
 
     private NavMeshAgent nav;
@@ -34,7 +34,7 @@ public class HaringManAi : MonoBehaviour
         enemyHealth.OnDeath += EnemyHealth_OnDeath;
         anim = GetComponent<Animator>();
 
-        
+
     }
 
     private void EnemyHealth_OnDeath()
@@ -52,6 +52,17 @@ public class HaringManAi : MonoBehaviour
         yield return null;
     }
 
+    IEnumerator AttackPlayer()
+    {
+        anim.SetBool("Attack", true);
+        playerHealth.Subtract(damageToPlayer);
+        attackTimer = 0.0f;
+        yield return new WaitForSeconds(1.2f);
+        anim.SetBool("Attack", false);
+        yield return null;
+    }
+
+
     private void Update()
     {
         if (isAlive == true)
@@ -64,8 +75,7 @@ public class HaringManAi : MonoBehaviour
             attackTimer += Time.deltaTime;
             if (Vector3.Distance(transform.position, player.transform.position) <= minAttackRange && attackTimer >= attackSpeedInSeconds)
             {
-                playerHealth.Subtract(damageToPlayer);
-                attackTimer = 0.0f;
+                StartCoroutine(AttackPlayer());
             }
         }
         else
