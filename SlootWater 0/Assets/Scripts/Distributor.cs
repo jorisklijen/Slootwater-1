@@ -62,7 +62,7 @@ public class Distributor : MonoBehaviour {
     }
 
     void TrySpawnMedkit() {
-        TrySpawnItem(medkitPrefab, "Medkit", 100.0f, playerHealth.Get(), medkitRates, maxMedkits);
+        TrySpawnItem(medkitPrefab, "Medkit", playerHealth.GetMax(), playerHealth.Get(), medkitRates, maxMedkits);
     }
 
     void TrySpawnMagazine() {

@@ -9,17 +9,17 @@ public class PlayerController : MonoBehaviour {
 
     Health health;
     FirstPersonController fps;
+    
+    [SerializeField]
+    AudioSource geigerSound;
+    bool inRadiation = false;
 
-    // Respawn is automatically generated where the player first spawns
-    GameObject respawn;
+    public void TriggerRadiation() {
+        inRadiation = true;
+    }
 
     // Start is called before the first frame update
     void Start() {
-        if (respawn == null) {
-            respawn = new GameObject("Respawn");
-            respawn.transform.position = transform.position;
-        }
-
         fps = GetComponent<FirstPersonController>();
         health = GetComponent<Health>();
         health.OnDeath += HandleDeath;
@@ -29,13 +29,18 @@ public class PlayerController : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    IEnumerator Respawn() {
-        fps.enabled = false;
-        yield return null;
-        transform.position = respawn.transform.position;
-        yield return null;
-        fps.enabled = true;
-        yield return null;
+    private void LateUpdate() {
+        if (inRadiation) {
+            if (!geigerSound.isPlaying) {
+                geigerSound.Play();
+                Debug.Log("PLAY!");
+            }
+        } else if (geigerSound.isPlaying) {
+            Debug.Log("PAUSE!");
+            geigerSound.Pause();
+        }
+
+        inRadiation = false;
     }
 
     // Update is called once per frame

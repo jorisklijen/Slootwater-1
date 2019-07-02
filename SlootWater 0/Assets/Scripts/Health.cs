@@ -39,4 +39,20 @@ public class Health : MonoBehaviour {
 
         return health;
     }
+
+    public float AddMax(float h) {
+        maxHealth += h;
+        return maxHealth;
+    }
+
+    public float SubtractMax(float h) {
+        maxHealth = Mathf.Max(0.0f, maxHealth - h);
+        health = Mathf.Min(health, maxHealth);
+
+        if (health <= 0.0f && OnDeath != null) {
+            OnDeath.Invoke();
+        }
+
+        return health;
+    }
 }

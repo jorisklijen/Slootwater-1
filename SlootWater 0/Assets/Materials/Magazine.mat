@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Item
+  m_Name: Magazine
   m_Shader: {fileID: -6465566751694194690, guid: f09f12928ed81204d89e7c3451ba3c7d,
     type: 3}
   m_ShaderKeywords: _NORMALMAP_TANGENT_SPACE
