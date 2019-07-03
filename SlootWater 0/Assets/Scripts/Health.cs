@@ -9,6 +9,9 @@ public class Health : MonoBehaviour {
     private float maxHealth = 100.0f;
     private float health;
 
+    // Of we al de OnDeath hebben getriggert
+    private bool triggeredDeath = false;
+
     public event Action OnDeath;
 
     // Start is called before the first frame update
@@ -33,8 +36,11 @@ public class Health : MonoBehaviour {
     public float Subtract(float h) {
         health = Mathf.Max(0.0f, health - h);
 
-        if (health <= 0.0f && OnDeath != null) {
-            OnDeath.Invoke();
+        if (!triggeredDeath) {
+            triggeredDeath = true;
+            if (health <= 0.0f && OnDeath != null) {
+                OnDeath.Invoke();
+            }
         }
 
         return health;
@@ -49,8 +55,12 @@ public class Health : MonoBehaviour {
         maxHealth = Mathf.Max(0.0f, maxHealth - h);
         health = Mathf.Min(health, maxHealth);
 
-        if (health <= 0.0f && OnDeath != null) {
-            OnDeath.Invoke();
+        if (!triggeredDeath) {
+            triggeredDeath = true;
+
+            if (health <= 0.0f && OnDeath != null) {
+                OnDeath.Invoke();
+            }
         }
 
         return health;
