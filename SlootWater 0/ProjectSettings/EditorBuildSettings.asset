@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/joris joris.unity
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/658bcfe7df3f15e46a9a92d85a6e2a0b
     guid: 658bcfe7df3f15e46a9a92d85a6e2a0b
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 325b63ec627b24447a496151e910af0b
   m_configObjects: {}
