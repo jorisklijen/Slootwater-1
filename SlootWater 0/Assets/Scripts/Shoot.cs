@@ -42,11 +42,13 @@ public class Shoot : MonoBehaviour
     [Header("Animaties")]
     public Animator animator;
 
-    public void AddMagazines(int amount = 1) {
+    public void AddMagazines(int amount = 1)
+    {
         currentMags += amount;
     }
 
-    public int GetCurrentMags() {
+    public int GetCurrentMags()
+    {
         return currentMags;
     }
 
@@ -113,6 +115,9 @@ public class Shoot : MonoBehaviour
         isReloding = false;
     }
 
+
+
+   
     void Shooting()
     {
         //haalt ammo uit ja magazijn
@@ -129,6 +134,7 @@ public class Shoot : MonoBehaviour
         int levelStaal = 1 << LayerMask.NameToLayer("LevelStaal");
         int spookEnemy = 1 << LayerMask.NameToLayer("Spooky");
         int haringEnemy = 1 << LayerMask.NameToLayer("Haring");
+        int radiatieVat = 1 << LayerMask.NameToLayer("Red");
 
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, spookEnemy))
         {
@@ -137,28 +143,42 @@ public class Shoot : MonoBehaviour
             hit.transform.position = new Vector3(Random.Range(-yeetRange, yeetRange),
                                                  Random.Range(-yeetRange, yeetRange),
                                                  Random.Range(-yeetRange, yeetRange));
+            return;
         }
-        else if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, haringEnemy))
+
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, haringEnemy))
         {
             hit.transform.GetComponent<Health>().Subtract(damage);
+            return;
         }
-        else if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, levelBeton))
-        {
-            //Debug.Log("Hit transform: " + hit.transform.name);
-            Vector3 decalPos = hit.point - transform.forward * 0.01f;
-            GameObject impactObj = Instantiate(hitBeton, decalPos, Quaternion.LookRotation(hit.normal)); // spawns a bullet inpact op beton.
-            impactObj.transform.Rotate(Vector3.forward, Random.Range(0.0f, 360.0f));
 
-            Destroy(impactObj, 10);
-        }
-        else if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, levelStaal))
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, radiatieVat))
         {
-            //Debug.Log("Hit transform: " + hit.transform.name);
-            Vector3 decalPos = hit.point - transform.forward * 0.01f;
-            GameObject impactObj = Instantiate(hitStaal, decalPos, Quaternion.LookRotation(hit.normal)); // spawns a bullet inpact op staal.
-            impactObj.transform.Rotate(Vector3.forward, Random.Range(0.0f, 360.0f));
-
-            Destroy(impactObj, 10);
+            hit.transform.GetComponent<Health>().Subtract(damage);
+            hitTargetObject(hitStaal, hit);
+            Debug.Log("pas op deze gaat zo boem");
+            return;
         }
+
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, levelBeton))
+        {
+            hitTargetObject(hitBeton, hit);
+            return;
+        }
+
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, levelStaal))
+        {
+            hitTargetObject(hitStaal, hit);
+            Debug.Log("hitStaal");
+            return;
+        }
+    }
+
+    void hitTargetObject(GameObject target, RaycastHit hit)
+    {
+        Vector3 decalPos = hit.point - transform.forward * 0.01f;
+        GameObject impactObj = Instantiate(target, decalPos, Quaternion.LookRotation(hit.normal)); // spawns a bullet inpact op staal.
+        impactObj.transform.Rotate(Vector3.forward, Random.Range(0.0f, 360.0f));
+        Destroy(impactObj, 10);
     }
 }
