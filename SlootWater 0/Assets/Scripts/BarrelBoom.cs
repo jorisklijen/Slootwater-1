@@ -11,7 +11,7 @@ public class BarrelBoom : MonoBehaviour
     private Health barrelHealth;
     private Health playerHealth;
     private GameObject player;
-    private Health enemyHealth; 
+    private Health enemyHealth;
 
 
     private void Start()
@@ -28,10 +28,23 @@ public class BarrelBoom : MonoBehaviour
         Destroy(gameObject);
         Debug.Log("kaas?? op dood");
         StartCoroutine(ExploderOfBarrels());
+
+        GameObject[] enemys = GameObject.FindGameObjectsWithTag("enemy");
+
+
         if (Vector3.Distance(transform.position, player.transform.position) <= explotionRange)
         {
             playerHealth.Subtract(explotionDamage);
+
+            return;
         }
+    //  if (enemys  )    //tom help
+    //                   //ik kom hier hiet uit het is hier de bedoeling dat de haring mannen ook schade neemen als het vat ondploft net als andere vaten als die te dicht bij staan. 
+    //  {
+    //
+    //
+    //      return;
+    //  }
     }
 
     IEnumerator ExploderOfBarrels()
@@ -40,10 +53,5 @@ public class BarrelBoom : MonoBehaviour
         yield return null;
     }
 
-    public void GetDamage()
-    {
-
-    }
- 
-
+    
 }

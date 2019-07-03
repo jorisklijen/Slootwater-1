@@ -134,6 +134,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 015707db677fa6d41a059f30fb170cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explotion: {fileID: 100002, guid: 6ecf76dc4f268d340b2666896a954bcc, type: 3}
+  explotion: {fileID: 100008, guid: 1dbc518224e49f34095aab42fe05751a, type: 3}
   explotionDamage: 40
-  explotionRange: 5
+  explotionRange: 2.5
