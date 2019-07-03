@@ -47,7 +47,17 @@ public class Distributor : MonoBehaviour {
     [SerializeField]
     List<SpawnChance> magazineRates;
 
+    [SerializeField, Header("Tijd wanneer het een nieuwe radkit probeert te spawnen")]
+    private float radkitSpawnTime = 60.0f;
 
+    [SerializeField]
+    GameObject radkitPrefab;
+
+    [SerializeField, Header("-1 voor geen limiet")]
+    private int maxRadkits = -1;
+
+    [SerializeField]
+    List<SpawnChance> radkitRates;
 
     // Start is called before the first frame update
     void Start() {
@@ -56,9 +66,11 @@ public class Distributor : MonoBehaviour {
 
         medkitRates.OrderByDescending(x => x.value);
         magazineRates.OrderByDescending(x => x.value);
+        radkitRates.OrderByDescending(x => x.value);
 
         InvokeRepeating("TrySpawnMedkit", medkitSpawnTime, medkitSpawnTime);
         InvokeRepeating("TrySpawnMagazine", magazineSpawnTime, magazineSpawnTime);
+        InvokeRepeating("TrySpawnRadkit", radkitSpawnTime, radkitSpawnTime);
     }
 
     void TrySpawnMedkit() {
@@ -70,7 +82,14 @@ public class Distributor : MonoBehaviour {
         totalMags += playerPistol.GetCurrentMags();
         totalMags += playerRifle.GetCurrentMags();
 
-        TrySpawnItem(magazinePrefab, "Magazine", 7, totalMags, magazineRates, maxMagazines);
+        // Aantal magazines dat de speler in totaal mag hebben (soft limiet)
+        const int MAX_MAGAZINES_TOTAL = 7;
+
+        TrySpawnItem(magazinePrefab, "Magazine", MAX_MAGAZINES_TOTAL, totalMags, magazineRates, maxMagazines);
+    }
+
+    void TrySpawnRadkit() {
+        TrySpawnItem(radkitPrefab, "Radkit", 100.0f, playerHealth.GetMax(), radkitRates, maxRadkits);
     }
 
     void TrySpawnItem(GameObject prefab, string tagName, float maxValue, float value,

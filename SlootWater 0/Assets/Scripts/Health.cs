@@ -41,7 +41,7 @@ public class Health : MonoBehaviour {
     }
 
     public float AddMax(float h) {
-        maxHealth += h;
+        maxHealth = Mathf.Min(100.0f, maxHealth + h);
         return maxHealth;
     }
 
