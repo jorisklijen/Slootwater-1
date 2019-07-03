@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BarrelBoom : MonoBehaviour
-{
+public class BarrelBoom : MonoBehaviour {
     public GameObject explotion;
     public float explotionDamage;
     public float explotionRange;
@@ -13,9 +12,7 @@ public class BarrelBoom : MonoBehaviour
     private GameObject player;
     private Health enemyHealth;
 
-
-    private void Start()
-    {
+    private void Start() {
         player = GameObject.Find("Player");
         playerHealth = player.GetComponent<Health>();
 
@@ -23,35 +20,46 @@ public class BarrelBoom : MonoBehaviour
         barrelHealth.OnDeath += BarrelHealth_OnDeath;
     }
 
-    private void BarrelHealth_OnDeath()
-    {
-        Destroy(gameObject);
+    private void BarrelHealth_OnDeath() {
         Debug.Log("kaas?? op dood");
         StartCoroutine(ExploderOfBarrels());
 
-        GameObject[] enemys = GameObject.FindGameObjectsWithTag("enemy");
+        // GameObject[] enemys = GameObject.FindGameObjectsWithTag("enemy");
 
 
-        if (Vector3.Distance(transform.position, player.transform.position) <= explotionRange)
-        {
-            playerHealth.Subtract(explotionDamage);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, explotionRange);
+        foreach (Collider c in colliders) {
+            // Doe jezelf geen damage anders zit je vast in een oneindige
+            // loop van barrels die zichzelf vermoordern en steeds OnDeath aanroepen
+            if (c.gameObject == gameObject) continue;
 
-            return;
+            Health health = c.GetComponent<Health>();
+
+            // Als dit ding een health script heeft
+            if (health) {
+                health.Subtract(explotionDamage);
+            }
         }
-    //  if (enemys  )    //tom help
-    //                   //ik kom hier hiet uit het is hier de bedoeling dat de haring mannen ook schade neemen als het vat ondploft net als andere vaten als die te dicht bij staan. 
-    //  {
-    //
-    //
-    //      return;
-    //  }
+
+        Destroy(gameObject);
+        // if (Vector3.Distance(transform.position, player.transform.position) <= explotionRange)
+        // {
+        //     playerHealth.Subtract(explotionDamage);
+        //     return;
+        // }
+        //  if (enemys  )    //tom help
+        //                   //ik kom hier hiet uit het is hier de bedoeling dat de haring mannen ook schade neemen als het vat ondploft net als andere vaten als die te dicht bij staan. 
+        //  {
+        //
+        //
+        //      return;
+        //  }
     }
 
-    IEnumerator ExploderOfBarrels()
-    {
+    IEnumerator ExploderOfBarrels() {
         Instantiate(explotion, transform.position, new Quaternion());
         yield return null;
     }
 
-    
+
 }
