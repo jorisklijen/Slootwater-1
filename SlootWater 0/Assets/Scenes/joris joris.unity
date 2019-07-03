@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.09694823, g: 0.10183224, b: 0.1125016, a: 1}
+  m_IndirectSpecularColor: {r: 0.09996481, g: 0.10511699, b: 0.11637629, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3314,41 +3314,41 @@ MonoBehaviour:
   waves:
   - name: haring time
     enemy: {fileID: 1376250498751497113, guid: 99e0d2ffa9a75e747987c032b3990daf, type: 3}
-    count: 12
+    count: 15
     rate: 3
-  - name: haring time
+  - name: haring2
     enemy: {fileID: 1376250498751497113, guid: 99e0d2ffa9a75e747987c032b3990daf, type: 3}
     count: 20
     rate: 3
-  - name: haring time
-    enemy: {fileID: 1376250498751497113, guid: 99e0d2ffa9a75e747987c032b3990daf, type: 3}
-    count: 32
-    rate: 3
-  - name: haring time
-    enemy: {fileID: 1376250498751497113, guid: 99e0d2ffa9a75e747987c032b3990daf, type: 3}
-    count: 52
-    rate: 3
-  - name: haring time
+  - name: haring3
     enemy: {fileID: 1376250498751497113, guid: 99e0d2ffa9a75e747987c032b3990daf, type: 3}
     count: 25
     rate: 3
-  - name: haring time
+  - name: 3
     enemy: {fileID: 1376250498751497113, guid: 99e0d2ffa9a75e747987c032b3990daf, type: 3}
     count: 30
     rate: 3
-  - name: haring time
+  - name: 4
     enemy: {fileID: 1376250498751497113, guid: 99e0d2ffa9a75e747987c032b3990daf, type: 3}
     count: 35
     rate: 3
-  - name: haring time
+  - name: 5
     enemy: {fileID: 1376250498751497113, guid: 99e0d2ffa9a75e747987c032b3990daf, type: 3}
     count: 40
     rate: 3
-  - name: haring time
+  - name: 6
     enemy: {fileID: 1376250498751497113, guid: 99e0d2ffa9a75e747987c032b3990daf, type: 3}
     count: 45
     rate: 3
-  - name: haring time
+  - name: 7
+    enemy: {fileID: 1376250498751497113, guid: 99e0d2ffa9a75e747987c032b3990daf, type: 3}
+    count: 45
+    rate: 3
+  - name: 8
+    enemy: {fileID: 1376250498751497113, guid: 99e0d2ffa9a75e747987c032b3990daf, type: 3}
+    count: 50
+    rate: 3
+  - name: 9
     enemy: {fileID: 1376250498751497113, guid: 99e0d2ffa9a75e747987c032b3990daf, type: 3}
     count: 50
     rate: 3
