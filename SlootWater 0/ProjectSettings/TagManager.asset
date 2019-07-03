@@ -11,6 +11,7 @@ TagManager:
   - Medkit
   - Magazine
   - Radkit
+  - enemy
   layers:
   - Default
   - TransparentFX
@@ -43,7 +44,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Red
   m_SortingLayers:
   - name: Default
     uniqueID: 0
