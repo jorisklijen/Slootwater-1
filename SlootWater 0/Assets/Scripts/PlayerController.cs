@@ -14,8 +14,18 @@ public class PlayerController : MonoBehaviour {
     AudioSource geigerSound;
     bool inRadiation = false;
 
+    bool hasKey = false;
+
     public void TriggerRadiation() {
         inRadiation = true;
+    }
+
+    public void TriggerKey() {
+        hasKey = true;
+    }
+
+    public bool HasKey() {
+        return hasKey;
     }
 
     // Start is called before the first frame update
