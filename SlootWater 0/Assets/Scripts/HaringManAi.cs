@@ -37,6 +37,7 @@ public class HaringManAi : MonoBehaviour
 
     private void EnemyHealth_OnDeath()
     {
+        Debug.Log("IK BEN NU SUSHI");
         canAttack = false;
         anim.SetTrigger("HaringDood");
         nav.enabled = false;

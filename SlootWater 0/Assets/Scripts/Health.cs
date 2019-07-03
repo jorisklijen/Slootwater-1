@@ -31,16 +31,14 @@ public class Health : MonoBehaviour {
         health = Mathf.Min(health + h, maxHealth);
         return health;
     }
-    
+
     // Returns true if the health has depleted to zero
     public float Subtract(float h) {
         health = Mathf.Max(0.0f, health - h);
 
-        if (!triggeredDeath) {
+        if (health <= 0.0f && OnDeath != null && !triggeredDeath) {
             triggeredDeath = true;
-            if (health <= 0.0f && OnDeath != null) {
-                OnDeath.Invoke();
-            }
+            OnDeath.Invoke();
         }
 
         return health;
@@ -55,12 +53,9 @@ public class Health : MonoBehaviour {
         maxHealth = Mathf.Max(0.0f, maxHealth - h);
         health = Mathf.Min(health, maxHealth);
 
-        if (!triggeredDeath) {
+        if (health <= 0.0f && OnDeath != null && !triggeredDeath) {
             triggeredDeath = true;
-
-            if (health <= 0.0f && OnDeath != null) {
-                OnDeath.Invoke();
-            }
+            OnDeath.Invoke();
         }
 
         return health;
