@@ -1568,6 +1568,7 @@ GameObject:
   - component: {fileID: 686406777}
   - component: {fileID: 686406776}
   - component: {fileID: 686406775}
+  - component: {fileID: 686406779}
   m_Layer: 5
   m_Name: Next_BTN
   m_TagString: Untagged
@@ -1668,7 +1669,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4156988874016778749}
+      - m_Target: {fileID: 4156988874246775213}
         m_MethodName: LoadBttn
         m_Mode: 1
         m_Arguments:
@@ -1718,6 +1719,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 686406773}
   m_CullTransparentMesh: 0
+--- !u!114 &686406779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686406773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab22c7d7511763344a8bbcaeac88d596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 
+  trasitionAnim: {fileID: 0}
 --- !u!1 &748305158
 GameObject:
   m_ObjectHideFlags: 0
@@ -3344,7 +3359,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: enter the suwer
+  m_text: enter the sewers
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57d13b4dae1c3e54dbba813f1d89c05a, type: 2}
   m_sharedMaterial: {fileID: 565260190796250479, guid: 57d13b4dae1c3e54dbba813f1d89c05a,
@@ -4063,11 +4078,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: The Haringmanen live in the sewer and are a great danger to humanity. Before
+  m_text: The Haringmanen live in the sewers and are a great danger to humanity. Before
     you knew it, the haringmannen had constructed sewers all around your underground
     colony, and you were trapped. you are determined to free your people. You need
-    to get back to the surface, but the only way is to find the legendary key in the
-    sewer and escape...
+    to get back to the surface, but the only way out is to find the legendary key
+    in the sewer and escape...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57d13b4dae1c3e54dbba813f1d89c05a, type: 2}
   m_sharedMaterial: {fileID: 565260190796250479, guid: 57d13b4dae1c3e54dbba813f1d89c05a,
@@ -23247,6 +23262,7 @@ GameObject:
   - component: {fileID: 4156988874246775185}
   - component: {fileID: 4156988874246775214}
   - component: {fileID: 4156988874246775215}
+  - component: {fileID: 4156988874246775213}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -23254,6 +23270,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4156988874246775213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4156988874246775212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab22c7d7511763344a8bbcaeac88d596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: joris joris
+  trasitionAnim: {fileID: 4156988874695667095}
 --- !u!114 &4156988874246775214
 MonoBehaviour:
   m_ObjectHideFlags: 0
