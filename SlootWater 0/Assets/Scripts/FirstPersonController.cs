@@ -336,6 +336,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 verticalMove *= (CamRot > climbDownThreshold) ? 1 : -1;
                 lateralMove = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
                 lateralMove = transform.TransformDirection(lateralMove);
+
+                // Minder snel horizontaal bewegen
+                lateralMove /= 3.0f;
+
                 ladderMovement = verticalMove + lateralMove;
                 m_CharacterController.Move(ladderMovement * climbSpeed * Time.deltaTime);
 

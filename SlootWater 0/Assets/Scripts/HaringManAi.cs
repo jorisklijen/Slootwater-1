@@ -25,6 +25,23 @@ public class HaringManAi : MonoBehaviour
     private float sinkTimer = 0.0f;
     private bool canAttack = true;
 
+    [SerializeField]
+    private Vector2 stepSoundInSeconds;
+    private float stepSoundTarget = 0.0f;
+    private float stepSoundTimer = 0.0f;
+
+    [SerializeField]
+    private AudioClip[] stepSounds;
+
+    [SerializeField]
+    private AudioSource stepSource;
+
+    [SerializeField]
+    private AudioClip[] attackSounds;
+
+    [SerializeField]
+    private AudioSource attackSource;
+
     private void Start()
     {
         nav = GetComponent<NavMeshAgent>();
@@ -33,6 +50,8 @@ public class HaringManAi : MonoBehaviour
         enemyHealth = GetComponent<Health>();
         enemyHealth.OnDeath += EnemyHealth_OnDeath;
         anim = GetComponent<Animator>();
+
+        stepSoundTarget = Random.Range(stepSoundInSeconds.x, stepSoundInSeconds.y);
     }
 
     private void EnemyHealth_OnDeath()
@@ -54,12 +73,27 @@ public class HaringManAi : MonoBehaviour
 
     IEnumerator AttackPlayer()
     {
+        PlayAttackSound();
         anim.SetBool("Attack", true);
         playerHealth.Subtract(damageToPlayer);
         attackTimer = 0.0f;
         yield return new WaitForSeconds(1.2f);
         anim.SetBool("Attack", false);
         yield return null;
+    }
+
+
+    void PlayStepSound() {
+        int r = Random.Range(0, stepSounds.Length);
+        stepSource.clip = stepSounds[r];
+        stepSource.PlayOneShot(stepSource.clip);
+    }
+
+
+    void PlayAttackSound() {
+        int r = Random.Range(0, attackSounds.Length);
+        attackSource.clip = attackSounds[r];
+        attackSource.PlayOneShot(attackSource.clip);
     }
 
     private void Update()
@@ -69,6 +103,14 @@ public class HaringManAi : MonoBehaviour
             if (nav.enabled)
             {
                 nav.SetDestination(player.transform.position);
+
+                stepSoundTimer += Time.deltaTime;
+                if (stepSoundTimer >= stepSoundTarget) {
+                    stepSoundTarget = Random.Range(stepSoundInSeconds.x, stepSoundInSeconds.y);
+                    stepSoundTimer = 0.0f;
+
+                    PlayStepSound();
+                }
             }
 
             attackTimer += Time.deltaTime;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.09996481, g: 0.10511699, b: 0.11637629, a: 1}
+  m_IndirectSpecularColor: {r: 0.14021166, g: 0.14381987, b: 0.15173732, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -552,6 +552,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &7586517 stripped
@@ -814,6 +825,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &20040114 stripped
@@ -1306,6 +1328,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &38587752 stripped
@@ -1379,6 +1412,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!1001 &39450699
@@ -5682,6 +5726,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &177760525 stripped
@@ -6333,6 +6388,17 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &194615986 stripped
@@ -8544,7 +8610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eeb5dc026fdf4b488bc7ae0138ab719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AgentTypeID: 0
+  m_AgentTypeID: -1372625422
   m_StartPoint: {x: 1.7565526, y: -0.2924059, z: 1.1404345}
   m_EndPoint: {x: 0.000002491855, y: -9.310724, z: 1.268381}
   m_Width: 0
@@ -9948,6 +10014,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &299817865 stripped
@@ -10698,6 +10775,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &326805942 stripped
@@ -11822,6 +11910,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &362406384 stripped
@@ -12369,6 +12468,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &372989481 stripped
@@ -12885,6 +12995,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &388613509 stripped
@@ -13417,6 +13538,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!1001 &412049719
@@ -14016,6 +14148,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &429307931 stripped
@@ -14249,6 +14392,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &436599567 stripped
@@ -14888,6 +15042,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &456800008 stripped
@@ -16360,6 +16525,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!1 &494660049
@@ -16596,6 +16772,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!1001 &505881078
@@ -17507,6 +17694,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &534390663 stripped
@@ -17795,6 +17993,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &552868606 stripped
@@ -22140,6 +22349,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &705056460 stripped
@@ -23055,6 +23275,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!1001 &733982518
@@ -23907,6 +24138,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!1001 &751806341
@@ -25220,6 +25462,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &778512221 stripped
@@ -26066,6 +26319,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!1001 &793218312
@@ -26423,6 +26687,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!1001 &802135360
@@ -29837,6 +30112,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &897057593 stripped
@@ -30760,7 +31046,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &909204460
 MonoBehaviour:
@@ -30775,14 +31061,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7924528, g: 0.7887148, b: 0.7887148, a: 0.6}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8156863}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 9c50a78d753302c4c95bf737ac5c06fd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -36145,6 +36431,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!1001 &1054566508
@@ -38609,6 +38906,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!1 &1132359501
@@ -39060,6 +39368,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!1 &1142048627 stripped
@@ -41427,7 +41746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eeb5dc026fdf4b488bc7ae0138ab719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AgentTypeID: 0
+  m_AgentTypeID: -1372625422
   m_StartPoint: {x: 0.00000009192631, y: 1.2859075, z: -0.6951024}
   m_EndPoint: {x: -0.0000011983071, y: -1.9287095, z: 0.9051631}
   m_Width: 0
@@ -42349,6 +42668,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &1246972519 stripped
@@ -42597,6 +42927,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!1 &1257026378 stripped
@@ -45925,6 +46266,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!1001 &1356767984
@@ -46698,6 +47050,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!1 &1374864224 stripped
@@ -47431,6 +47794,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!1001 &1391041098
@@ -49491,19 +49865,19 @@ MonoBehaviour:
   - value: 1
     chance: 0
   - value: 0.85
-    chance: 10
+    chance: 3
   - value: 0.71
-    chance: 20
+    chance: 15
   - value: 0.57
-    chance: 33
+    chance: 20
   - value: 0.42
-    chance: 40
+    chance: 25
   - value: 0.28
-    chance: 50
+    chance: 35
   - value: 0.14
-    chance: 65
+    chance: 45
   - value: 0
-    chance: 95
+    chance: 60
   radkitSpawnTime: 10
   radkitPrefab: {fileID: 4639300472194013194, guid: 521b23cc06ad45748a1a6bdc000f714d,
     type: 3}
@@ -49958,6 +50332,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!1001 &1462786020
@@ -51096,6 +51481,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!1001 &1484948277
@@ -52288,6 +52684,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &1524748473 stripped
@@ -52493,6 +52900,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!1001 &1527795050
@@ -55070,6 +55488,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!1001 &1587170041
@@ -55445,6 +55874,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!1 &1596011035
@@ -57384,6 +57824,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!1001 &1672086293
@@ -57944,6 +58395,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &1682559583 stripped
@@ -60108,9 +60570,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eeb5dc026fdf4b488bc7ae0138ab719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AgentTypeID: 0
-  m_StartPoint: {x: 1.1908174, y: 0.018380834, z: 1.6911782}
-  m_EndPoint: {x: 0.109230176, y: -11.188864, z: 1.3701508}
+  m_AgentTypeID: -1372625422
+  m_StartPoint: {x: 1.3149934, y: -0.18907578, z: 0.947682}
+  m_EndPoint: {x: -0.23621917, y: -11.188864, z: 1.3001801}
   m_Width: 0
   m_CostModifier: -1
   m_Bidirectional: 1
@@ -60344,6 +60806,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &1736474003 stripped
@@ -61233,6 +61706,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!1001 &1764525052
@@ -64722,6 +65206,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!1001 &1847880919
@@ -67336,6 +67831,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &1921908184 stripped
@@ -68522,6 +69028,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &1962522849 stripped
@@ -69216,6 +69733,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!1001 &1986173010
@@ -69560,6 +70088,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &1997610456 stripped
@@ -71771,6 +72310,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &2073132320 stripped
@@ -72907,6 +73457,17 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: explotionRange
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012563217489237153, guid: 191d692470ff56749bc70a61a5c822d4,
+        type: 3}
+      propertyPath: soundPrefab
+      value: 
+      objectReference: {fileID: 7377509409874566103, guid: 4857f58407383dc42bc93daf9f649f7b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 191d692470ff56749bc70a61a5c822d4, type: 3}
 --- !u!4 &2110169173 stripped
@@ -74429,7 +74990,7 @@ PrefabInstance:
     - target: {fileID: 6453627021246053578, guid: a44f7fc8c5a9c3d4fbbcaf0a22a99c7b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6453627021246053578, guid: a44f7fc8c5a9c3d4fbbcaf0a22a99c7b,
         type: 3}
@@ -74439,12 +75000,12 @@ PrefabInstance:
     - target: {fileID: 6453627021246053578, guid: a44f7fc8c5a9c3d4fbbcaf0a22a99c7b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6453627021246053578, guid: a44f7fc8c5a9c3d4fbbcaf0a22a99c7b,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6453627021246053578, guid: a44f7fc8c5a9c3d4fbbcaf0a22a99c7b,
         type: 3}

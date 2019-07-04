@@ -9,6 +9,9 @@ public class BarrelBoom : MonoBehaviour {
 
     private Health barrelHealth;
 
+    [SerializeField]
+    private GameObject soundPrefab;
+
     private void Start() {
         barrelHealth = GetComponent<Health>();
         barrelHealth.OnDeath += BarrelHealth_OnDeath;
@@ -36,6 +39,7 @@ public class BarrelBoom : MonoBehaviour {
 
     IEnumerator ExploderOfBarrels() {
         Instantiate(explotion, transform.position, new Quaternion());
+        Instantiate(soundPrefab, transform.position, new Quaternion());
         yield return null;
     }
 
