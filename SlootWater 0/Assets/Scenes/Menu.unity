@@ -364,7 +364,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &232591231
 RectTransform:
   m_ObjectHideFlags: 0
@@ -775,8 +775,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Ten years ago everything changed. when the nuclear power plant in Borssele
-    had a spontaneous meltdouwn ...
+  m_text: Ten years ago everything changed, when the nuclear power plant in Borssele
+    had a spontaneous meltdown...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57d13b4dae1c3e54dbba813f1d89c05a, type: 2}
   m_sharedMaterial: {fileID: 565260190796250479, guid: 57d13b4dae1c3e54dbba813f1d89c05a,
@@ -939,7 +939,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 0
+  m_padding: 2.6539998
   m_canvasRenderer: {fileID: 458200483}
   m_TextComponent: {fileID: 420833504}
   m_materialReferenceIndex: 1
@@ -1046,11 +1046,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "You have b een provided with a gun and a machine gun with limeted ammo
-    to protect your self. to shoot awappon use the leftmouseklik, you can reload using
-    the R key and to change wappons use te scrollweel.\n\nyou move with the W.A.S.D
-    keys. \nhold shift to boost your speed.\nstand next to a lader look up and use
-    W to go op the lader.\n"
+  m_text: "You have been provided with a pistol and an assault rifle with limited
+    ammo to protect yourself. to shoot press the Left Mouse Button, you can reload
+    using the R key and to change weapons you can use the scroll wheel.\n\nyou can
+    move with the W.A.S.D keys. \nhold shift to run.\nto go up and down ladders, move
+    forwards and look in the desired direction."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57d13b4dae1c3e54dbba813f1d89c05a, type: 2}
   m_sharedMaterial: {fileID: 565260190796250479, guid: 57d13b4dae1c3e54dbba813f1d89c05a,
@@ -1195,7 +1195,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 546198287}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -1269,7 +1269,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561767589}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -1733,7 +1733,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &748305159
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1890,10 +1890,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: more than half a million inhabitants of zealand have died as a result of
-    the radical fallout. they say that the spirits of the inhabitants still roam the
-    sewer. Because of the radiactive fallout, the Haringen have mutated and have become
-    Haringmannen...
+  m_text: more than half a million inhabitants of zeeland have died as a result of
+    the radioactive fallout. they say that the spirits of the inhabitants still roam
+    the sewers. Because of the radioactive fallout, the Haringen have mutated and
+    have become Haringmannen...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57d13b4dae1c3e54dbba813f1d89c05a, type: 2}
   m_sharedMaterial: {fileID: 565260190796250479, guid: 57d13b4dae1c3e54dbba813f1d89c05a,
@@ -2615,7 +2615,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138483220}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -3190,7 +3190,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1581011406
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4063,10 +4063,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: The Haaringmanen live in the sewer and are a great danger to humanity. Your
-    colony was in the middle when the Haaringmanen built the sewer. you are determined
-    to free your people. There is a legend that somewhere in the sewer a key lights
-    up that opens on the door that leads back to the outside.
+  m_text: The Haringmanen live in the sewer and are a great danger to humanity. Before
+    you knew it, the haringmannen had constructed sewers all around your underground
+    colony, and you were trapped. you are determined to free your people. You need
+    to get back to the surface, but the only way is to find the legendary key in the
+    sewer and escape...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 57d13b4dae1c3e54dbba813f1d89c05a, type: 2}
   m_sharedMaterial: {fileID: 565260190796250479, guid: 57d13b4dae1c3e54dbba813f1d89c05a,
@@ -4211,7 +4212,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031460767}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -23145,7 +23146,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &4156988874016778746
 CanvasRenderer:
   m_ObjectHideFlags: 0
