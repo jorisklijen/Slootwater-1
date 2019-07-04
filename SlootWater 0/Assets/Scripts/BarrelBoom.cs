@@ -8,24 +8,14 @@ public class BarrelBoom : MonoBehaviour {
     public float explotionRange;
 
     private Health barrelHealth;
-    private Health playerHealth;
-    private GameObject player;
-    private Health enemyHealth;
 
     private void Start() {
-        player = GameObject.Find("Player");
-        playerHealth = player.GetComponent<Health>();
-
         barrelHealth = GetComponent<Health>();
         barrelHealth.OnDeath += BarrelHealth_OnDeath;
     }
 
     private void BarrelHealth_OnDeath() {
-        Debug.Log("kaas?? op dood");
         StartCoroutine(ExploderOfBarrels());
-
-        // GameObject[] enemys = GameObject.FindGameObjectsWithTag("enemy");
-
 
         Collider[] colliders = Physics.OverlapSphere(transform.position, explotionRange);
         foreach (Collider c in colliders) {
@@ -42,18 +32,6 @@ public class BarrelBoom : MonoBehaviour {
         }
 
         Destroy(gameObject);
-        // if (Vector3.Distance(transform.position, player.transform.position) <= explotionRange)
-        // {
-        //     playerHealth.Subtract(explotionDamage);
-        //     return;
-        // }
-        //  if (enemys  )    //tom help
-        //                   //ik kom hier hiet uit het is hier de bedoeling dat de haring mannen ook schade neemen als het vat ondploft net als andere vaten als die te dicht bij staan. 
-        //  {
-        //
-        //
-        //      return;
-        //  }
     }
 
     IEnumerator ExploderOfBarrels() {

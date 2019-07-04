@@ -36,17 +36,15 @@ public class PlayerController : MonoBehaviour {
     }
 
     void HandleDeath() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Death");
     }
 
     private void LateUpdate() {
         if (inRadiation) {
             if (!geigerSound.isPlaying) {
                 geigerSound.Play();
-                Debug.Log("PLAY!");
             }
         } else if (geigerSound.isPlaying) {
-            Debug.Log("PAUSE!");
             geigerSound.Pause();
         }
 

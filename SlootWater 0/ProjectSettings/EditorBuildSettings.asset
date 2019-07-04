@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/joris joris.unity
     guid: f4072e2a27a15bf44ad18c1fccae7ac2
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 31b2a8bbaa9cd0145a52091c67f1411a
+  - enabled: 1
+    path: Assets/Scenes/Death.unity
+    guid: 1502d926b9f734d49b9adad0cb2fdf65
   m_configObjects: {}

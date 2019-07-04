@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class WinDoor : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         if (other.name == "Player" && other.GetComponent<PlayerController>().HasKey()) {
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("Win");
         }
     }
 }
